@@ -18,10 +18,13 @@ class Crawler:
 
     _crawled_urls_data = {}
 
-    async def crawl(self, url, max_crawls = 30):
+    def crawl(self, url, max_crawls):
         data = self.CrawledUrlData()
         self._crawled_urls_data[url] = data
         data.url = url
+        asyncio.run(self.crawl_loop(data, url, max_crawls))
+
+    async def crawl_loop(self, url, data, max_crawls):
         data.depth_reached += 1
         await self._crawl_single_page(data, url)
         for depth in list(data.internal_urls_by_depth):
@@ -59,7 +62,8 @@ class Crawler:
         + "\nDepth Reached: " + str(self._crawled_urls_data[url].depth_reached)\
         + "\nInternal Urls: " + str(len(self._crawled_urls_data[url].internal_urls)) \
         + "\nExternal Urls: " + str(len(self._crawled_urls_data[url].external_urls)) \
-        + "\nBroken Urls: " + str(len(self._crawled_urls_data[url].broken_urls))
+        + "\nBroken Urls: " + str(len(self._crawled_urls_data[url].broken_urls)) \
+        + "\n"
 
     async def _crawl_single_page(self, data, url):
         clean_screen()
