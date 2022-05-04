@@ -1,6 +1,6 @@
 # Crawler
 
-## Description
+## Description:
 
 Simple web crawler. Crawls through given url and keeps information about other urls found.
 
@@ -12,11 +12,11 @@ Simple web crawler. Crawls through given url and keeps information about other u
 - aiohttp
 - urllib
 
-## Instalation
+## Instalation:
 
 ``` git clone https://github.com/avivilloz/crawler ```
 
-## Run
+## Run:
 
 ``` cd crawler ```
 
