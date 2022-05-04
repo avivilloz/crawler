@@ -21,9 +21,9 @@ git clone https://github.com/avivilloz/crawler
 ``` cd crawler ```
 ``` python test.py -u <url> [optional flags] ```
 
-### Flags:
+## Flags:
 
-``` -gs --get-statistics : if chosen, statistics are displayed with output info ```
+``` -gs --get-statistics ``` : if chosen, statistics are displayed with output info
 
 ``` -otf --output-to-file : if chosen, output is displayed in file ```
 
