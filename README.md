@@ -19,6 +19,7 @@ git clone https://github.com/avivilloz/crawler
 ## Run
 
 ``` cd crawler ```
+
 ``` python test.py -u <url> [optional flags] ```
 
 ## Flags:
