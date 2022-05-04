@@ -1,10 +1,10 @@
 # Crawler
 
-## Description:
+## Description
 
 Simple web crawler. Crawls through given url and keeps information about other urls found.
 
-## Dependency on Python Libraries:
+## Dependency on Python Libraries
 
 - argparse
 - asyncio
@@ -12,17 +12,17 @@ Simple web crawler. Crawls through given url and keeps information about other u
 - aiohttp
 - urllib
 
-## Instalation:
+## Installation
 
 ``` git clone https://github.com/avivilloz/crawler ```
 
-## Run:
+## Run
 
 ``` cd crawler ```
 
 ``` python test.py -u <url> [optional flags] ```
 
-## Flags:
+## Flags
 
 ``` -gs --get-statistics ``` - if chosen, statistics are displayed with output info
 
