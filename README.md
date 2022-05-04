@@ -14,7 +14,7 @@ Simple web crawler. Crawls through given url and keeps information about other u
 
 ## Instalation
 
-git clone https://github.com/avivilloz/crawler
+``` git clone https://github.com/avivilloz/crawler ```
 
 ## Run
 
