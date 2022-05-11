@@ -4,8 +4,8 @@ from args import args
 
 if __name__ == "__main__":
     url = args.url
-    crawler = Crawler()
-    crawler.crawl(url, args.max_crawls)
+    crawler = Crawler(args.max_crawls, args.should_log_to_file)
+    crawler.crawl(url)
     output = crawler.get_info(url)
     if args.should_get_statistics:
         output = crawler.get_statistics(url) + output
