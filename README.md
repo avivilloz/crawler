@@ -24,10 +24,12 @@ Simple web crawler. Crawls through given url and keeps information about other u
 
 ## Flags
 
-``` -gs --get-statistics ``` - if chosen, statistics are displayed with output info
+``` -s --get-statistics ``` - if chosen, statistics are displayed with output info
+
+``` -l --log ``` - if chosen, run-time logs will be added to output/log_crawling.txt
 
 ``` -otf --output-to-file ``` - if chosen, output is displayed in file
 
 ``` -ofn --output-file-name <file-name> ``` - default file name is "crawled_info.txt"
 
-``` -mc --max-crawls <num-of-crawls> ``` - default is 30
+``` -m --max-crawls <num-of-crawls> ``` - default is 30
