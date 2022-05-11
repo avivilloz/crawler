@@ -11,19 +11,6 @@ class Crawler:
     _blacklist_schemes = ["javascript"]
     _log_file_path = "output/log_crawling.txt"
 
-    class CrawledUrlData:
-        def __init__(self):
-            self.url = ""
-            self.crawls_attempts = 1
-            self.crawled_urls = set()
-            self.failed_to_fetch_urls = set()
-            self.internal_urls = set()
-            self.external_urls = set()
-            self.internal_urls_by_depth = {}
-            self.external_urls_by_depth = {}
-            self.broken_urls = set()
-            self.unsupported_urls = set()
-
     def __init__(self, max_crawls, should_log_to_file):
         self._crawled_urls_data = {}
         self._max_crawls = max_crawls
@@ -36,6 +23,19 @@ class Crawler:
     def __del__(self):
         if self._log_file:
             self._log_file.close()
+
+    class CrawledUrlData:
+        def __init__(self):
+            self.url = ""
+            self.crawls_attempts = 1
+            self.crawled_urls = set()
+            self.failed_to_fetch_urls = set()
+            self.internal_urls = set()
+            self.external_urls = set()
+            self.internal_urls_by_depth = {}
+            self.external_urls_by_depth = {}
+            self.broken_urls = set()
+            self.unsupported_urls = set()
 
     def crawl(self, url):
         data = self.CrawledUrlData()
