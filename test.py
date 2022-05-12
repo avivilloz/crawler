@@ -1,5 +1,5 @@
 from utils import clean_screen, output_to_file, output_to_screen
-from crawler2 import Crawler
+from crawler import Crawler
 from args import args
 
 if __name__ == "__main__":
